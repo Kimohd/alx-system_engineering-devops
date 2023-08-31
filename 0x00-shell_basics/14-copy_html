@@ -1,7 +1,2 @@
 #!/bin/bash
-for file in *.html; do
-    if [ ! -e "$parent_dir/$file" ] || [ "$file" -nt "$parent_dir/$file" ]; then
-        cp "$file" "$(dirname "$(pwd)")"
-        echo "Copied $file to $(dirname "$(pwd)")"
-    fi
-done
+cp -un *.html ../ 
